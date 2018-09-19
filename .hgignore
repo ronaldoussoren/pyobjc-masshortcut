@@ -3,6 +3,7 @@ Lib/MASShortcut/MASShortcut.framework
 build
 dist
 project.xcworkspace
+.tox
 
 syntax: glob
 *.so
