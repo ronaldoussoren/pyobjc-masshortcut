@@ -47,7 +47,7 @@ class oc_egg_info (egg_info.egg_info):
 
         path = os.path.join(self.egg_info, 'PKG-INFO')
         with open(path, 'a+') as fp:
-            fp.write('Project-URL: Documentation, https://%s.readthedocs.io/en/latest/\n' % (REPO_NAME,))
+            #fp.write('Project-URL: Documentation, https://%s.readthedocs.io/en/latest/\n' % (REPO_NAME,))
             fp.write('Project-URL: Issue tracker, https://bitbucket.org/ronaldoussoren/%s/issues?status=new&status=open\n' % (REPO_NAME,))
 
 class oc_test (test.test):
@@ -524,7 +524,7 @@ def setup(
         k['long_description'] += "\n\nProject links\n"
         k['long_description'] += "-------------\n"
         k['long_description'] += "\n"
-        k['long_description'] += "* `Documentation <https://%s.readthedocs.io/en/latest/>`_\n\n" % (REPO_NAME,)
+        #k['long_description'] += "* `Documentation <https://%s.readthedocs.io/en/latest/>`_\n\n" % (REPO_NAME,)
         k['long_description'] += "* `Issue Tracker <https://bitbucket.org/ronaldoussoren/%s/issues?status=new&status=open>`_\n\n" % (REPO_NAME,)
         k['long_description'] += "* `Repository <https://bitbucket.org/ronaldoussoren/%s/>`_\n\n" % (REPO_NAME,)
         k['long_description_content_type'] = 'text/x-rst; charset=UTF-8'
