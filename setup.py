@@ -12,6 +12,7 @@ from distutils.sysconfig import get_config_var
 import os
 import subprocess
 import shlex
+import shutil
 
 VERSION="1.0a0"
 
@@ -49,12 +50,14 @@ class build_framework(Command):
                 ] + archs + [
                 "build" ], cwd='src/MASShortcut')
 
+        if os.path.exists("Lib/MASShortcut/MASShortcut.framework"):
+            shutil.rmtree("Lib/MASShortcut/MASShortcut.framework")
         os.rename(os.path.join(build_dir, "Build", "Products", "Release", "MASShortcut.framework"), "Lib/MASShortcut/MASShortcut.framework")
 
 build.build.sub_commands.insert(0, ('build_framework', None))
 
 setup(
-    name='pyobjc-framework-MASShortcut',
+    name='pyobjc-MASShortcut',
     description = "Wrappers for the library MASShortcut on macOS",
     packages = [ "MASShortcut" ],
     min_os_level = '10.9',
