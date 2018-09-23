@@ -39,7 +39,7 @@ class oc_build_py (build_py.build_py):
 from pkg_resources import working_set, normalize_path, add_activation_listener, require
 from distutils.errors import DistutilsPlatformError, DistutilsError
 
-REPO_NAME='pyobjc'
+REPO_NAME='pyobjc-masshortcut'
 
 class oc_egg_info (egg_info.egg_info):
     def run(self):
