@@ -1,4 +1,4 @@
-include *.txt MANIFEST.in *.py
+include *.txt MANIFEST.in *.py *.rst
 graft src
 graft Doc
 graft Examples
