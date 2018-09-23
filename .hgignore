@@ -1,0 +1,13 @@
+.git
+Lib/MASShortcut/MASShortcut.framework
+build
+dist
+project.xcworkspace
+
+syntax: glob
+*.so
+*.egg-info
+*.dSYM
+*.pyc
+*.pyo
+*.swp
