@@ -48,7 +48,7 @@ class oc_egg_info (egg_info.egg_info):
         path = os.path.join(self.egg_info, 'PKG-INFO')
         with open(path, 'a+') as fp:
             #fp.write('Project-URL: Documentation, https://%s.readthedocs.io/en/latest/\n' % (REPO_NAME,))
-            fp.write('Project-URL: Issue tracker, https://bitbucket.org/ronaldoussoren/%s/issues?status=new&status=open\n' % (REPO_NAME,))
+            fp.write('Project-URL: Issue tracker, https://github.com/ronaldoussoren/%s/issues?status=new&status=open\n' % (REPO_NAME,))
 
 class oc_test (test.test):
     description = "run test suite"
@@ -525,15 +525,15 @@ def setup(
         k['long_description'] += "-------------\n"
         k['long_description'] += "\n"
         #k['long_description'] += "* `Documentation <https://%s.readthedocs.io/en/latest/>`_\n\n" % (REPO_NAME,)
-        k['long_description'] += "* `Issue Tracker <https://bitbucket.org/ronaldoussoren/%s/issues?status=new&status=open>`_\n\n" % (REPO_NAME,)
-        k['long_description'] += "* `Repository <https://bitbucket.org/ronaldoussoren/%s/>`_\n\n" % (REPO_NAME,)
+        k['long_description'] += "* `Issue Tracker <https://github.com/ronaldoussoren/%s/issues?status=new&status=open`_\n\n" % (REPO_NAME,)
+        k['long_description'] += "* `Repository <https://github.com/ronaldoussoren/%s/>`_\n\n" % (REPO_NAME,)
         k['long_description_content_type'] = 'text/x-rst; charset=UTF-8'
 
     _setup(
         cmdclass=cmdclass,
         author='Ronald Oussoren',
         author_email='pyobjc-dev@lists.sourceforge.net',
-        url='https://bitbucket.org/ronaldoussoren/pyobjc',
+        url='https://github.comronaldoussoren/pyobjc',
         platforms = [ plat_name ],
         package_dir = { '': 'Lib', 'PyObjCTest': 'PyObjCTest' },
         dependency_links = [],
